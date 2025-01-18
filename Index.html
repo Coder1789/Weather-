@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <!--Required Meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Title of the website-->
+    <title>Weather</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="body">
+    <!--Div container for the stars-->
+   <div class="ripple-background"></div>
+    <div class="circle xxlarge shade1"></div>
+        <div class="circle xlarge shade2"></div>
+            <div class="circle large shade3"></div>
+            <div class="circle medium shade4"></div>
+            <div class="circle small shade5"></div>
+
+        
+<div class ="container">
+    <h1>Weather</h1>
+    
+    <!--Adding a textbox with the a placeholder-->
+    <input type="text" id="locationInput" placeholder="Enter a city">
+    <button id="searchButton">Search</button>
+    <div class="weather-info">
+        <h2 id="location"></h2>
+        <div id="weatherAnimation"></div>
+        <p id="temperature"></p>
+        <p id="description"></p>
+    </div>
+</div>
+
+<div class="loader" id="loader"></div>
+<script src="script.js"></script>
+</body>
+</html>

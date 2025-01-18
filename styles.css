@@ -1,0 +1,204 @@
+body{
+    background: #3399ff;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  
+  .circle{
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    animation: ripple 15s infinite;
+    box-shadow: 0px 0px 1px 0px #508fb9;
+  }
+  
+  .small{
+    width: 200px;
+    height: 200px;
+    left: -100px;
+    bottom: -100px;
+  }
+  
+  .medium{
+    width: 400px;
+    height: 400px;
+    left: -200px;
+    bottom: -200px;
+  }
+  
+  .large{
+    width: 600px;
+    height: 600px;
+    left: -300px;
+    bottom: -300px;
+  }
+  
+  .xlarge{
+    width: 800px;
+    height: 800px;
+    left: -400px;
+    bottom: -400px;
+  }
+  
+  .xxlarge{
+    width: 1000px;
+    height: 1000px;
+    left: -500px;
+    bottom: -500px;
+  }
+  
+  .shade1{
+    opacity: 0.2;
+  }
+  .shade2{
+    opacity: 0.5;
+  }
+  
+  .shade3{
+    opacity: 0.7;
+  }
+  
+  .shade4{
+    opacity: 0.8;
+  }
+  
+  .shade5{
+    opacity: 0.9;
+  }
+  
+  @keyframes ripple{
+    0%{
+      transform: scale(0.8);
+    }
+    
+    50%{
+      transform: scale(1.2);
+    }
+    
+    100%{
+      transform: scale(0.8);
+    }
+  }
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5); /* Set the background color to be transparent */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adjust the alpha value here for the box shadow transparency */
+    margin-top: 105px;
+}
+
+
+h1{
+    font-size: 24px;
+    
+}
+input[type="text"] {
+width:100%;
+padding: 10px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius: 5px;
+}
+
+button{
+    background-color:#007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.weather-info {
+    margin-top: 20px;
+}
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 80px;
+    height: 40px;
+    border-radius: 100px 100px 0 0;
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto;
+    display: none; /* Initially hidden */
+}
+
+.loader:before {
+    content: "";
+    position: absolute;
+    inset: 0 0 -100%;
+    background: 
+        radial-gradient(farthest-side, #ffd738 80%, #0000) left 70% top 20%/15px 15px,
+        radial-gradient(farthest-side, #020308 92%, #0000) left 65% bottom 19%/12px 12px,
+        radial-gradient(farthest-side, #ecfefe 92%, #0000) left 70% bottom 20%/15px 15px,
+        linear-gradient(#9eddfe 50%, #020308 0);
+    background-repeat: no-repeat;
+    animation: l5 2s infinite;
+}
+
+@keyframes l5 {
+    0%, 20% { transform: rotate(0) }
+    40%, 60% { transform: rotate(.5turn) }
+    80%, 100% { transform: rotate(1turn) }
+}
+/* Weather Animations */
+.sun {
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, #FFD700 60%, transparent 60%);
+    border-radius: 50%;
+    margin: 20px auto;
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+}
+
+.cloud {
+    width: 80px;
+    height: 50px;
+    background: #ccc;
+    border-radius: 50%;
+    margin: 20px auto;
+    position: relative;
+}
+
+.cloud:before, .cloud:after {
+    content: "";
+    position: absolute;
+    background: #ccc;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: -25px;
+}
+
+.cloud:before {
+    left: -20px;
+}
+
+.cloud:after {
+    right: -20px;
+}
+
+.rain {
+    width: 20px;
+    height: 20px;
+    background: #00f;
+    border-radius: 50%;
+    position: relative;
+    margin: 20px auto;
+    animation: raindrop 1s infinite;
+}
+
+@keyframes raindrop {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(40px); opacity: 0; }
+}
+
